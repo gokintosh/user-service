@@ -1,6 +1,7 @@
 package com.crakowdragons.userhack.model;
 
 
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @Entity
 @NoArgsConstructor
+@Data
 public class AppUser {
 
     @Id
