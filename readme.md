@@ -66,7 +66,7 @@ Test API endpoints using POSTMAN📮 <br>
 #### So when the request reaches the endpoint at spring backend, the custom filters, will validate the token and extracts details on authority and username.
 #### Some routes require authorization. So depending on the ROLE specified, the user get redirected to resource or not accessible page.
 
-## Example
+## Example (tried with a user who does not have access to non admin route)
 ![Forbidden route response](https://user-images.githubusercontent.com/52125327/198881140-2e9fc8df-fbe7-4823-86cb-cd3241f2d393.png)
 
 ### more to come....
