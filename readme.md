@@ -58,4 +58,4 @@ Test API endpoints using POSTMAN📮 <br>
 
 #### what values does this token contains?
 
-![JWT image](https://ibb.co/PCPWmS7)
+![JWT image](https://user-images.githubusercontent.com/52125327/198880600-5cb41922-a0b5-40b8-b446-e7eaff78f9ca.png)
