@@ -1,6 +1,6 @@
-package com.crakowdragons.userhack.repository;
+package com.cracowdragons.userhack.repository;
 
-import com.crakowdragons.userhack.model.AppUser;
+import com.cracowdragons.userhack.model.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

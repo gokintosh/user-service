@@ -1,9 +1,9 @@
-package com.crakowdragons.userhack.controller;
+package com.cracowdragons.userhack.controller;
 
 
-import com.crakowdragons.userhack.payload.request.LoginRequest;
-import com.crakowdragons.userhack.payload.request.SignUpRequest;
-import com.crakowdragons.userhack.service.UserService;
+import com.cracowdragons.userhack.payload.request.LoginRequest;
+import com.cracowdragons.userhack.payload.request.SignUpRequest;
+import com.cracowdragons.userhack.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

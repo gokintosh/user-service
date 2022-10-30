@@ -1,16 +1,14 @@
-package com.crakowdragons.userhack.service;
+package com.cracowdragons.userhack.service;
 
-import com.crakowdragons.userhack.model.AppUser;
-import com.crakowdragons.userhack.model.ERole;
-import com.crakowdragons.userhack.model.Role;
-import com.crakowdragons.userhack.payload.request.LoginRequest;
-import com.crakowdragons.userhack.payload.request.SignUpRequest;
-import com.crakowdragons.userhack.repository.RoleRepository;
-import com.crakowdragons.userhack.repository.UserRepository;
-import com.crakowdragons.userhack.security.jwt.JwtUtils;
-import com.crakowdragons.userhack.security.service.UserDetailsImpl;
+import com.cracowdragons.userhack.model.AppUser;
+import com.cracowdragons.userhack.model.ERole;
+import com.cracowdragons.userhack.model.Role;
+import com.cracowdragons.userhack.security.jwt.JwtUtils;
+import com.cracowdragons.userhack.payload.request.LoginRequest;
+import com.cracowdragons.userhack.payload.request.SignUpRequest;
+import com.cracowdragons.userhack.repository.RoleRepository;
+import com.cracowdragons.userhack.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -19,10 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor

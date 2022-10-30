@@ -1,7 +1,6 @@
-package com.crakowdragons.userhack.security.jwt;
+package com.cracowdragons.userhack.security.jwt;
 
-import com.crakowdragons.userhack.security.service.UserDetailsServiceImpl;
-import lombok.RequiredArgsConstructor;
+import com.cracowdragons.userhack.security.service.UserDetailsServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

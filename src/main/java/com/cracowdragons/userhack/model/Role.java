@@ -1,4 +1,4 @@
-package com.crakowdragons.userhack.model;
+package com.cracowdragons.userhack.model;
 
 
 import lombok.Data;

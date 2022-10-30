@@ -1,9 +1,9 @@
-package com.crakowdragons.userhack.security;
+package com.cracowdragons.userhack.security;
 
 
-import com.crakowdragons.userhack.security.jwt.AuthEntryPointJwt;
-import com.crakowdragons.userhack.security.jwt.AuthTokenFilter;
-import com.crakowdragons.userhack.security.service.UserDetailsServiceImpl;
+import com.cracowdragons.userhack.security.jwt.AuthTokenFilter;
+import com.cracowdragons.userhack.security.jwt.AuthEntryPointJwt;
+import com.cracowdragons.userhack.security.service.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

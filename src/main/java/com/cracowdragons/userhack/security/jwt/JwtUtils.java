@@ -1,7 +1,7 @@
-package com.crakowdragons.userhack.security.jwt;
+package com.cracowdragons.userhack.security.jwt;
 
 
-import com.crakowdragons.userhack.security.service.UserDetailsImpl;
+import com.cracowdragons.userhack.security.service.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

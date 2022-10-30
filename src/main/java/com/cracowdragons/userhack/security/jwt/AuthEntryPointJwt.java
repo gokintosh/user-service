@@ -1,4 +1,4 @@
-package com.crakowdragons.userhack.security.jwt;
+package com.cracowdragons.userhack.security.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;

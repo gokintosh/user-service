@@ -1,4 +1,4 @@
-package com.crakowdragons.userhack.payload.request;
+package com.cracowdragons.userhack.payload.request;
 
 
 import lombok.Data;

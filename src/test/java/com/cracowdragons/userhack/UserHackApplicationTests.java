@@ -1,4 +1,4 @@
-package com.crakowdragons.userhack;
+package com.cracowdragons.userhack;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

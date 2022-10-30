@@ -1,6 +1,6 @@
-package com.crakowdragons.userhack.security.service;
+package com.cracowdragons.userhack.security.service;
 
-import com.crakowdragons.userhack.model.AppUser;
+import com.cracowdragons.userhack.model.AppUser;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;

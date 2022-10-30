@@ -1,6 +1,5 @@
-package com.crakowdragons.userhack.payload.request;
+package com.cracowdragons.userhack.payload.request;
 
-import com.crakowdragons.userhack.model.Role;
 import lombok.Data;
 
 import javax.validation.constraints.Email;
