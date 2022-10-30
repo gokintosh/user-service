@@ -52,10 +52,25 @@ Test API endpoints using POSTMAN📮 <br>
 }
 ~~~
 
-### we login user with username and password. <br>
+### we login user with username and password. This creates stateless authentication for user.<br>
 ### we will return a JWT token like this one: <br> 
 `eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNYXJjaW4iLCJpYXQiOjE2NjcxMzQ4MjksImV4cCI6MTY2NzIyMTIyOX0.DE2x_r4Ddx19JURDK1QGvUAi3150TSewZCWzsJP07d2eTHoBeHp6ggKkV0a1Ra-ovLO5Ndy8t4_IfmIYizlTXg` <br>
 
 #### what values does this token contains?
 
 ![JWT image](https://user-images.githubusercontent.com/52125327/198880600-5cb41922-a0b5-40b8-b446-e7eaff78f9ca.png)
+
+#### we store this token inside browser and each tie when we send a request, we user this token as `Authorization` header as a bearer token.
+> `Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNYXJjaW4iLCJpYXQiOjE2NjcxMzQ4MjksImV4cCI6MTY2NzIyMTIyOX0.DE2x_r4Ddx19JURDK1QGvUAi3150TSewZCWzsJP07d2eTHoBeHp6ggKkV0a1Ra-ovLO5Ndy8t4_IfmIYizlTXg`
+
+#### So when the request reaches the endpoint at spring backend, the custom filters, will validate the token and extracts details on authority and username.
+#### Some routes require authorization. So depending on the ROLE specified, the user get redirected to resource or not accessible page.
+
+## Example
+![Forbidden route response](https://user-images.githubusercontent.com/52125327/198881140-2e9fc8df-fbe7-4823-86cb-cd3241f2d393.png)
+
+### more to come....
+
+
+> **created by** <br>
+> [gokintosh🤖](https://github.com/gokintosh)
