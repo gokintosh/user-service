@@ -1,19 +1,36 @@
 package com.crakowdragons.userhack.model.block;
 
+import com.google.gson.GsonBuilder;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class TrashChain {
 
     public static void main(String[] args) {
 
 
-        Block genesisBlock=new Block("Hi I am the first block","0");
-        System.out.println("Hash for block 1 : "+genesisBlock.getHash());
+        List<Block>trashChain=new ArrayList<>();
 
-        Block secondBlock=new Block("Hi I am the second block", genesisBlock.getHash());
-        System.out.println("Hash for block 2 : "+secondBlock.getHash());
+        int difficulty=6;
 
-        Block thirdBlock=new Block("Hi I am the third block", secondBlock.getHash());
-        System.out.println("Hash for block 3 : "+thirdBlock.getHash());
 
+        trashChain.add(new Block("This is block 1","0"));
+        System.out.println("Mining block 1");
+        trashChain.get(0).mineBlock(difficulty);
+
+        trashChain.add(new Block("This is block 2",trashChain.get((trashChain.size())-1).getHash()));
+        System.out.println("Mining block 2");
+        trashChain.get((trashChain.size())-1).mineBlock(difficulty);
+
+        trashChain.add(new Block("This is block 3",trashChain.get((trashChain.size())-1).getHash()));
+        System.out.println("Mining block 3");
+        trashChain.get((trashChain.size())-1).mineBlock(difficulty);
+
+
+        String blockChainJson=new GsonBuilder().setPrettyPrinting().create().toJson(trashChain);
+
+        System.out.println(blockChainJson);
 
     }
 }
