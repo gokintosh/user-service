@@ -10,6 +10,7 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.Date;
 
 @Getter
@@ -17,17 +18,20 @@ import java.util.Date;
 @Slf4j
 public class Block {
 
-    private String hash;
-    private String previousHash;
-    private String data;
-    private long timeStamp;
+    public String hash;
+    public String previousHash;
 
-    private int nonce;
+    public String merkleRoot;
+
+    public ArrayList<Transaction>transactions=new ArrayList<Transaction>();
+    public long timeStamp;
+
+    public int nonce;
 
 
 
-    public Block(String data,String previousHash){
-        this.data=data;
+    public Block(String previousHash){
+
         this.previousHash=previousHash;
         this.timeStamp=new Date().getTime();
         this.hash=calculateHash();
@@ -36,7 +40,7 @@ public class Block {
     public String calculateHash(){
         String calculatedHash= StringUtil.applySha256(
                 previousHash+Long.toString(timeStamp)+Integer.toString(nonce)+
-                        data
+                        merkleRoot
         );
 
         return calculatedHash;
@@ -52,6 +56,21 @@ public class Block {
         }
 
         System.out.println("Block Mined!! : "+hash);
+    }
+
+
+    public boolean addTransaction(Transaction transaction) {
+        //process transaction and check if valid, unless block is genesis block then ignore.
+        if(transaction == null) return false;
+        if((previousHash != "0")) {
+            if((!transaction.processTransaction())) {
+                System.out.println("Transaction failed to process. Discarded.");
+                return false;
+            }
+        }
+        transactions.add(transaction);
+        System.out.println("Transaction Successfully added to Block");
+        return true;
     }
 
 
