@@ -1,5 +1,7 @@
 package com.crakowdragons.userhack.model.block;
 
+import com.crakowdragons.userhack.model.AppUser;
+
 import java.security.*;
 import java.security.spec.ECGenParameterSpec;
 import java.util.ArrayList;
@@ -10,11 +12,16 @@ public class Wallet {
     public PrivateKey privateKey;
     public PublicKey publicKey;
 
+    public AppUser user;
+
     public HashMap<String, TransactionOutput>UTOXs=new HashMap<String,TransactionOutput>();
 
 
     public Wallet(){
         generateKeyPair();
+    }
+    public Wallet(AppUser appUser){
+        this.user=appUser;
     }
 
     public void generateKeyPair(){

@@ -15,7 +15,7 @@ public class TrashChain {
     public static float minimumTransaction = 0.1f;
     public static HashMap<String, TransactionOutput> UTXOs = new HashMap<String, TransactionOutput>();
 
-    public static int difficulty = 3;
+    public static int difficulty = 5;
 
     public static Wallet walletA;
     public static Wallet walletB;
