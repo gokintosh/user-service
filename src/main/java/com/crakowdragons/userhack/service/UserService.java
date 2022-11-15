@@ -53,6 +53,8 @@ public class UserService {
         user.setUsername(signUpRequest.getUsername());
         user.setPassword(encoder.encode(signUpRequest.getPassword()));
 
+
+
         Set<String> roles = signUpRequest.getRole();
         Set<Role> userRoles = new HashSet<>();
 

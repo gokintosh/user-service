@@ -1,19 +1,29 @@
 package com.crakowdragons.userhack.model.block;
 
 import com.crakowdragons.userhack.model.AppUser;
+import lombok.Data;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import java.security.*;
 import java.security.spec.ECGenParameterSpec;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+@Entity
 public class Wallet {
+
+    @Id
+    int id;
     public PrivateKey privateKey;
     public PublicKey publicKey;
 
+    @OneToOne
     public AppUser user;
 
+    @SuppressWarnings("JpaAttributeTypeInspection")
     public HashMap<String, TransactionOutput>UTOXs=new HashMap<String,TransactionOutput>();
 
 
